@@ -8,7 +8,10 @@ import sqlite3
 from sqlite3 import Error
 app = Flask(__name__)
 
-
+@app.route("/")
+@login_required
+def main():
+    return render_template("main.html")
 @app.route("/login", methods=["POST", "GET"])
 def login():
     if request.method == "POST":
