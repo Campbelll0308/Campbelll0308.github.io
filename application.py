@@ -8,9 +8,6 @@ import sqlite3
 from sqlite3 import Error
 app = Flask(__name__)
 
-con = sql_connection()
-
-sql_table(con)
 
 @app.route("/login", methods=["POST", "GET"])
 def login():
